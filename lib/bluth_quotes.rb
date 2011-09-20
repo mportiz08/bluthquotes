@@ -10,4 +10,12 @@ module BluthQuotes
     end
     quotes
   end
+  
+  def self.all_from(character)
+    self.all.select {|q| q.characters.include? character.downcase}
+  end
+  
+  def self.random_from(character)
+    self.all_from(character).shuffle.first
+  end
 end

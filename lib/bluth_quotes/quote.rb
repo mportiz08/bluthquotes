@@ -8,7 +8,7 @@ module BluthQuotes
     end
     
     def add_line(character, txt)
-      @characters = (@characters << character.downcase).uniq
+      @characters = (@characters << character.gsub('_', ' ').downcase).uniq
       @lines << "#{humanize_name(character)}: #{txt}"
     end
     
