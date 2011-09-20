@@ -1,1 +1,1 @@
-require 'bluth_quotes/episodes/season_1/episode_101'
+Dir['bluth_quotes/episodes/season_1/*.rb'].each {|ep| require File.join("bluth_quotes/episodes/season_1/", File.basename(ep, '.rb'))}
